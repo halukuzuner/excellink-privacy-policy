@@ -29,7 +29,7 @@
   .nav-links a.active{background:var(--blue);color:white;}
 
   .page-layout{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4rem 2rem 6rem;display:grid;grid-template-columns:200px 1fr;gap:4rem;align-items:start;}
-  .toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
+  .toc-wrap{position:sticky;top:88px;} .toc{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
   .toc-title{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem;}
   .toc ul{list-style:none;}
   .toc li{margin-bottom:0.1rem;}
@@ -57,7 +57,7 @@
   .footer-links a:hover{color:white;}
   .footer-copy{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;}
 
-  @media(max-width:768px){.page-layout{grid-template-columns:1fr;}.toc{position:static;}.nav-links{display:none;}}
+  @media(max-width:768px){.page-layout{grid-template-columns:1fr;}.toc-wrap{position:static;}.nav-links{display:none;}}
 </style>
 </head>
 <body>
@@ -76,7 +76,7 @@
 </nav>
 
 <div class="page-layout">
-  <nav class="toc">
+  <div class="toc-wrap"><nav class="toc">
     <div class="toc-title">Contents</div>
     <ul>
       <li><a href="#overview">Overview</a></li>
@@ -88,7 +88,7 @@
       <li><a href="#rights">Your Rights</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </nav></div>
 
   <article class="content">
     <h1>Privacy Policy</h1>
@@ -145,7 +145,7 @@
     <h2 id="contact">Contact</h2>
     <p>For privacy-related requests or questions:</p>
     <p><strong>Haluk Uzuner</strong><br>
-    <a href="mailto:ahuzuner@gmail.com">ahuzuner@gmail.com</a></p>
+    <a href="/cdn-cgi/l/email-protection#35545d404f405b5047755258545c591b565a58"><span class="__cf_email__" data-cfemail="f5949d808f809b9087b59298949c99db969a98">[email&#160;protected]</span></a></p>
   </article>
 </div>
 
@@ -156,25 +156,14 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="user-guide.html">User Guide</a></li>
       <li><a href="release-notes.html">Release Notes</a></li>
-      <li><a href="mailto:ahuzuner@gmail.com">ahuzuner@gmail.com</a></li>
+      <li><a href="/cdn-cgi/l/email-protection#a9c8c1dcd3dcc7ccdbe9cec4c8c0c587cac6c4"><span class="__cf_email__" data-cfemail="0869607d727d666d7a486f65696164266b6765">[email&#160;protected]</span></a></li>
     </ul>
     <div class="footer-copy">© 2026 Haluk Uzuner</div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const sections = document.querySelectorAll('[id]');
   const tocLinks = document.querySelectorAll('.toc a');
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        tocLinks.forEach(a => a.classList.remove('active'));
-        const active = document.querySelector(`.toc a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => obs.observe(s));
-</script>
-</body>
-</html>
+   
