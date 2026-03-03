@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ExcelLink for Revit</title>
+<link rel="icon" type="image/png" href="icon1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:#1B5EA6;--blue-dark:#0f3d73;--blue-light:#d6e4f7;
+    --green:#1D6F42;--green-light:#d4edda;
+    --gray:#8a9aaa;--grid:#c8d8e8;--bg:#f4f7fb;--white:#ffffff;
+    --text:#1a2332;--text-light:#4a5a6a;--border:#dde6f0;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--text);}
+  body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;opacity:0.35;pointer-events:none;z-index:0;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(244,247,251,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);}
+  .nav-brand img{width:36px;height:36px;border-radius:8px;}
+  .nav-brand span{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-0.02em;}
+  .nav-brand span b{color:var(--blue);}
+  .nav-brand span em{color:var(--green);font-style:normal;}
+  .nav-links{display:flex;gap:0.25rem;list-style:none;}
+  .nav-links a{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:500;text-decoration:none;color:var(--text-light);padding:0.4rem 0.8rem;border-radius:6px;transition:all 0.15s;}
+  .nav-links a:hover{background:var(--blue-light);color:var(--blue);}
+  .nav-links a.active{background:var(--blue);color:white;}
+
+  .page-layout{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4rem 2rem 6rem;display:grid;grid-template-columns:200px 1fr;gap:4rem;align-items:start;}
+  .toc{position:sticky;top:88px;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
+  .toc-title{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem;}
+  .toc ul{list-style:none;}
+  .toc li{margin-bottom:0.1rem;}
+  .toc a{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--text-light);text-decoration:none;padding:0.3rem 0.6rem;border-radius:5px;display:block;transition:all 0.15s;}
+  .toc a:hover{background:var(--blue-light);color:var(--blue);}
+  .toc a.active{background:var(--blue);color:white;}
+
+  .content h1{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem;}
+  .content .subtitle{font-size:0.875rem;color:var(--text-light);font-weight:300;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border);font-family:'IBM Plex Mono',monospace;}
+  .content h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;margin-top:3rem;margin-bottom:1rem;padding-top:2rem;border-top:1px solid var(--border);scroll-margin-top:88px;}
+  .content h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+  .content p{font-size:0.9rem;line-height:1.75;color:var(--text-light);margin-bottom:0.75rem;}
+  .content ul{margin:0.5rem 0 0.75rem 1.25rem;}
+  .content li{font-size:0.9rem;line-height:1.75;color:var(--text-light);margin-bottom:0.25rem;}
+  .content a{color:var(--blue);}
+  strong{color:var(--text);font-weight:500;}
+  .info-box{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1.25rem 0;}
+  .info-box p{margin:0;font-size:0.875rem;line-height:1.75;}
+
+  footer{position:relative;z-index:1;background:var(--text);color:rgba(255,255,255,0.6);padding:2.5rem 2rem;}
+  .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:white;}
+  .footer-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap;}
+  .footer-links a{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.15s;}
+  .footer-links a:hover{color:white;}
+  .footer-copy{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;}
+
+  @media(max-width:768px){.page-layout{grid-template-columns:1fr;}.toc{position:static;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <img src="icon1024.png" alt="ExcelLink for Revit">
+    <span><b>ExcelLink</b> <em>for Revit</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="user-guide.html">User Guide</a></li>
+    <li><a href="release-notes.html">Release Notes</a></li>
+    <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+  </ul>
+</nav>
+
+<div class="page-layout">
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data Collected</a></li>
+      <li><a href="#license">License Validation</a></li>
+      <li><a href="#no-data">What We Don't Collect</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#third-party">Third Parties</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article class="content">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">ExcelLink for Revit &nbsp;·&nbsp; Last updated: March 2026</p>
+
+    <h2 id="overview">Overview</h2>
+    <p>ExcelLink for Revit is developed and published by Haluk Uzuner. This policy explains what data the add-in collects, how it is used, and your rights regarding that data.</p>
+    <p>The add-in is designed to operate with minimal data collection. Your Revit project data and Excel files remain entirely on your own machine and are never transmitted to any server.</p>
+
+    <h2 id="data-collected">Data Collected</h2>
+    <p>The add-in collects only the minimum data necessary to operate the license validation system:</p>
+    <ul>
+      <li><strong>License key</strong> — entered by you during activation. Transmitted to the license server for validation.</li>
+      <li><strong>Machine identifier</strong> — a hardware-based identifier used to associate a license with a specific device. This is not personally identifiable information.</li>
+      <li><strong>Activation timestamp</strong> — the date and time of the most recent successful license check. Stored locally to support the 30-day offline grace period.</li>
+    </ul>
+
+    <h2 id="license">License Validation</h2>
+    <p>When the add-in starts, it contacts the license validation server to verify that the license key is valid. The following data is sent during this check:</p>
+    <ul>
+      <li>Your license key</li>
+      <li>A machine identifier (not linked to your name or email)</li>
+    </ul>
+    <p>License sessions are logged on the server with a timestamp and machine identifier. Session logs are retained for <strong>45 days</strong> and then permanently deleted.</p>
+    <p>The add-in supports <strong>offline use for up to 30 days</strong> after the last successful validation. No data is transmitted during offline operation.</p>
+
+    <h2 id="no-data">What We Don't Collect</h2>
+    <p>The following data is <strong>never collected, transmitted, or stored</strong>:</p>
+    <ul>
+      <li>Your name, email address, or any personal contact information</li>
+      <li>Revit project files, model data, or parameter values</li>
+      <li>Excel files or their contents</li>
+      <li>Usage statistics, telemetry, or crash reports</li>
+    </ul>
+
+    <h2 id="retention">Data Retention</h2>
+    <div class="info-box">
+      <p><strong>License records</strong> are retained for the duration of the license validity period, then deleted upon expiry.<br><br>
+      <strong>Session logs</strong> (timestamp + machine ID) are retained for 45 days and then permanently deleted.<br><br>
+      <strong>Local activation data</strong> is stored in your Windows application data folder and is removed when the add-in is uninstalled.</p>
+    </div>
+
+    <h2 id="third-party">Third Parties</h2>
+    <p>The add-in does not share any data with third parties. The license validation server is operated exclusively by Haluk Uzuner and is not shared with any external service provider.</p>
+    <p>The add-in uses the following open-source libraries, which operate entirely locally and transmit no data:</p>
+    <ul>
+      <li><strong>ClosedXML</strong> — for reading and writing Excel files</li>
+      <li><strong>Newtonsoft.Json</strong> — for configuration file serialization</li>
+    </ul>
+
+    <h2 id="rights">Your Rights</h2>
+    <p>You have the right to request deletion of any data associated with your license key. Upon request, license records and associated session logs will be permanently deleted within 30 days.</p>
+
+    <h2 id="contact">Contact</h2>
+    <p>For privacy-related requests or questions:</p>
+    <p><strong>Haluk Uzuner</strong><br>
+    <a href="mailto:ahuzuner@gmail.com">ahuzuner@gmail.com</a></p>
+  </article>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">ExcelLink for Revit</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="user-guide.html">User Guide</a></li>
+      <li><a href="release-notes.html">Release Notes</a></li>
+      <li><a href="mailto:ahuzuner@gmail.com">ahuzuner@gmail.com</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Haluk Uzuner</div>
+  </div>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
