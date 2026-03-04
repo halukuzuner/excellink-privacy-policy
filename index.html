@@ -602,6 +602,12 @@
     white-space: nowrap;
   }
 
+  .pricing-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
   .pricing-name {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
@@ -613,7 +619,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
     color: var(--gray);
-    margin-top: -0.75rem;
+    margin-top: 0.25rem;
   }
 
   .pricing-price {
@@ -1033,7 +1039,7 @@
 
   <div class="billing-toggle" id="billingToggle">
     <span class="billing-label active" id="labelMonthly">Monthly</span>
-    <div class="toggle-track" id="toggleTrack" onclick="switchBilling()">
+    <div class="toggle-track" id="toggleTrack">
       <div class="toggle-thumb"></div>
     </div>
     <span class="billing-label" id="labelAnnual">Annual</span>
@@ -1044,7 +1050,7 @@
 
     <!-- PERSONAL -->
     <div class="pricing-card">
-      <div>
+      <div class="pricing-header">
         <div class="pricing-name">Personal</div>
         <div class="pricing-scope">1 user · 1 computer</div>
       </div>
@@ -1071,7 +1077,7 @@
     <!-- PROFESSIONAL -->
     <div class="pricing-card popular">
       <div class="popular-badge">MOST POPULAR</div>
-      <div>
+      <div class="pricing-header">
         <div class="pricing-name">Professional</div>
         <div class="pricing-scope">1 user · 2 computers</div>
       </div>
@@ -1097,9 +1103,9 @@
 
     <!-- TEAM -->
     <div class="pricing-card">
-      <div>
+      <div class="pricing-header">
         <div class="pricing-name">Team</div>
-        <div class="pricing-scope">Up to 5 users</div>
+        <div class="pricing-scope">5 Personal licenses</div>
       </div>
       <div class="pricing-price">
         <div class="price-monthly">
@@ -1123,7 +1129,7 @@
 
     <!-- ENTERPRISE -->
     <div class="pricing-card">
-      <div>
+      <div class="pricing-header">
         <div class="pricing-name">Enterprise</div>
         <div class="pricing-scope">10+ users</div>
       </div>
@@ -1165,13 +1171,13 @@
       <li><a href="user-guide.html">User Guide</a></li>
       <li><a href="release-notes.html">Release Notes</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <a href="mailto:ahuzuner@gmail.com">ahuzuner@gmail.com</a>
+      <li><a href="mailto:ahuzuner@gmail.com"><span class="__cf_email__" data-cfemail="9afbf2efe0eff4ffe8dafdf7fbf3f6b4f9f5f7">[email&#160;protected]</span></a></li>
     </ul>
     <div class="footer-copy">© 2026 Haluk Uzuner</div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   let isAnnual = false;
   const prices = {
     personal:     { monthly: '2.99',  annual: '2.49',  annualNote: '$29.90 / year — 2 months free' },
